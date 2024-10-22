@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>替换节点node</title>
+    <script>
+        function replaceP() {
+            let oOldp = document.getElementsByTagName("p")[0];
+            let oNewp = document.createElement("p");
+            let oText = document.createTextNode("我叫GG爆");
+            oNewp.appendChild(oText);
+            oOldp.parentNode.replaceChild(oNewp, oOldp);
+            //alert("替换成功！");
+        }
+
+        function createP() {
+            let oP = document.createElement("p");
+            let oText = document.createTextNode("我叫GG爆");
+            oP.appendChild(oText);
+            document.body.appendChild(oP);
+        }
+    </script>
+</head>
+<body onclick="replaceP()">
+    <p>每一个不曾起舞的日子是对生命的辜负！</p>
+</body>
+</html>
